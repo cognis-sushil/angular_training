@@ -1,0 +1,20 @@
+{{title}}
+name{{name}}<br>
+name1{{name1}}<br>
+{{age}}age1->{{age1}}
+<input [(ngModel)]="name" />{{name}}
+<button (click)="onClick()">Click me </button>
+<hr>
+
+<app-test ></app-test>
+
+<app-test #one></app-test>
+
+
+<div>Page start here</div>
+<app-header></app-header>
+<div>
+  <router-outlet></router-outlet>
+  
+</div>
+<app-fotter></app-fotter>
