@@ -6,6 +6,36 @@ name1{{name1}}<br>
 <button (click)="onClick()">Click me </button>
 <hr>
 
+<hr>
+
+<table>
+
+  <tr>
+    <td>Num1 </td>
+    <td><input [(ngModel)]="num1" /> </td>
+  </tr>
+
+  
+  <tr>
+    <td>Num2 </td>
+    <td><input [(ngModel)]="num2" /> </td>
+  </tr>
+
+  
+  <tr>
+    <td>Sum </td>
+    <td><button (click)="sum()">Sum</button></td>
+  </tr>
+
+  
+  <tr>
+    <td>Minus </td>
+    <td><button >Minus</button></td>
+  </tr>
+
+</table>
+
+output {{result}}
 <app-test ></app-test>
 
 <app-test #one></app-test>

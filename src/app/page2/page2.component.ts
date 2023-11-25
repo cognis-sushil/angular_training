@@ -1,6 +1,7 @@
 import { Component,OnDestroy,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {ActivatedRoute, RouterModule} from '@angular/router';
+import { Emp } from '../class/emp';
 @Component({
   selector: 'app-page2',
   templateUrl: './page2.component.html',
@@ -20,6 +21,7 @@ export class Page2Component implements OnDestroy, OnInit{
   }
   goToPage1(){
     //this.router.navigate(["page1"])
-    this.router.navigate(["page1",{name:"one",age:22}])
+    const emp:Emp={name:"one",age:22}
+    this.router.navigate(["page1",emp])
   }
 }

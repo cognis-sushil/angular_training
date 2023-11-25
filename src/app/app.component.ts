@@ -13,6 +13,9 @@ export class AppComponent {
   age:number=0;
   age1!:number;
 
+  num1:number=0
+  num2:number=0
+  result?:number;
   @ViewChild("one")
   testComponent!:TestComponent;
 
@@ -27,5 +30,8 @@ export class AppComponent {
    this.testComponent.test1=Math.random();
    this.testComponent1.test1=Math.random();
     //alert(this.name)
+  }
+  sum():void{
+    this.result=this.num1*1+this.num2*1;
   }
 }
