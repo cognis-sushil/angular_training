@@ -38,4 +38,29 @@ describe('AppComponent with Entry Compon', () => {
     expect(component.result).toEqual(50)
   });
 
+  it('should test the sum by html', () => {
+    spyOn(component, 'sum');
+    let button = fixture.debugElement.nativeElement.querySelector('#sum');
+    button.click();
+    expect(component.sum).toHaveBeenCalledOnceWith();
+  });
+
+  it('should test the sum by input from html ', () => {     
+    let num1 = fixture.debugElement.nativeElement.querySelector('#num1');
+    num1.value="20"
+    console.log(num1);   
+    num1.dispatchEvent(new Event('input'));
+    let num2 = fixture.debugElement.nativeElement.querySelector('#num2');
+    num2.value="10"
+     num2.dispatchEvent(new Event('input'));
+    //fixture.detectChanges();
+    // num2.dispatchEvent(new Event('20'));
+    let button = fixture.debugElement.nativeElement.querySelector('#sum');
+    button.click();
+    expect(component.result).toEqual(30);   
+    
+    
+  });
+
+
 });

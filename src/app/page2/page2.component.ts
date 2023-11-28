@@ -24,4 +24,24 @@ export class Page2Component implements OnDestroy, OnInit{
     const emp:Emp={name:"one",age:22}
     this.router.navigate(["page1",emp])
   }
+
+  caclculate(op:string,num1:number,num2:number):number{
+    switch(op){
+      case "+":
+          return this.sum(num1,num2);
+      case "-":
+            return this.minus(num1,num2);  
+    }
+    return 0;
+  }
+
+  sum(num1:number,num2:number):number{
+      return num1+num2;
+  }
+
+
+  
+  minus(num1:number,num2:number):number{
+    return num1-num2;
+}
 }

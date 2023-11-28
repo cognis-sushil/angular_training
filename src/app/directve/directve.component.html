@@ -1,0 +1,37 @@
+
+
+
+<ng-template #other_content>
+
+    <div  class="ëlseCase">
+        else case
+    </div>
+
+
+</ng-template>
+
+<p>directve works!</p>
+<button (click)="toggle()">Toggle</button>
+<div style="height: 100px;background-color: red;" *ngIf="hideAndShow; else other_content">
+ddd
+</div>
+
+
+{{listOfEmp |json}} pipes
+
+<hr>
+
+<table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listOfEmp ">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.age}}</td>
+      </tr>

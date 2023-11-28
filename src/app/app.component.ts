@@ -34,4 +34,8 @@ export class AppComponent {
   sum():void{
     this.result=this.num1*1+this.num2*1;
   }
+
+  minus():void{
+    this.result=this.num1*1-this.num2*1;
+  }
 }

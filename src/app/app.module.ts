@@ -9,6 +9,7 @@ import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
 import { HeaderComponent } from './header/header.component';
 import { FotterComponent } from './fotter/fotter.component';
+import { DirectveComponent } from './directve/directve.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FotterComponent } from './fotter/fotter.component';
     Page1Component,
     Page2Component,
     HeaderComponent,
-    FotterComponent
+    FotterComponent,
+    DirectveComponent
   ],
   imports: [
     BrowserModule,
