@@ -8,9 +8,9 @@ import { Emp } from '../class/emp';
 })
 export class DirectveComponent {
   hideAndShow:boolean=false;
-
+  roles:string[]=["Write","Red","R/W"]
   listOfEmp!:Emp[];
-
+role:string="";
   constructor( ){
     //alert("i am page 1")
     this.listOfEmp=[];
@@ -34,5 +34,9 @@ export class DirectveComponent {
     }
     */
 
+  }
+
+  onRoleChnage(){
+    localStorage.setItem("role",this.role)
   }
 }

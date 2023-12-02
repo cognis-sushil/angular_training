@@ -35,3 +35,18 @@ ddd
         <td>{{item.name}}</td>
         <td>{{item.age}}</td>
       </tr>
+</tbody>
+</table>
+
+<select [(ngModel)]="role" (ngModelChange)="onRoleChnage()">
+  <option *ngFor="let item of roles">{{item}}</option>
+</select>
+
+<div class="row" >
+    <div class="col-2">Action</div>
+    <div class="col-8">
+      <button appRoles>Edit</button>
+      <button appRoles>Add</button>
+      <button appRoles>View</button>
+    </div>
+</div>  

@@ -8,6 +8,9 @@ import { TestComponent } from './test/test.component';
 })
 export class AppComponent {
   title:string = 'test';
+  roles:string[]=["Write","Red","R/W"]
+
+  role:any;
   name:string="";
   name1!:string;
   age:number=0;
@@ -37,5 +40,9 @@ export class AppComponent {
 
   minus():void{
     this.result=this.num1*1-this.num2*1;
+  }
+
+  onRoleChnage(){
+    localStorage.setItem("role",this.role)
   }
 }

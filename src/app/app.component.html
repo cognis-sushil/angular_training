@@ -36,10 +36,13 @@ name1{{name1}}<br>
 </table>
 
 output {{result}}
-<app-test ></app-test>
+ 
 
 <app-test #one></app-test>
-
+select role
+<select [(ngModel)]="role" (ngModelChange)="onRoleChnage()">
+  <option *ngFor="let item of roles">{{item}}</option>
+</select>
 
 <div>Page start here</div>
 <app-header></app-header>

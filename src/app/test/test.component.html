@@ -1,2 +1,43 @@
 <p>test works!</p>
 xxx{{test1}}
+
+<select [(ngModel)]="inpvalue" (ngModelChange)="test()">
+        <option *ngFor="let item of index" >{{item}}
+        </option>
+    </select>
+
+<div [ngSwitch]="inpvalue">      
+    <p style='color:blue'  *ngSwitchCase="1">You have selected M S Dhoni</p>      
+    <p style='color:blue'  *ngSwitchCase="2">You have selected Sachin Tendulkar</p>      
+    <p style='color:blue'  *ngSwitchCase="3">You have selected Satyaprakash Samantaray</p>     
+    <p style='color:red'  *ngSwitchDefault>Sorry! Invalid selection....</p>      
+    </div>
+
+    <div [ngStyle]='{"color":"blue","background-color":"red"}'>
+        onenene
+    </div>
+
+mmmmm
+
+     
+<hr>
+    <div [ngStyle]='style1' style="background-color: green;">
+        onenene  {{inpvalue*10}}
+
+        {{style1|json}}
+    </div>
+
+    <div [ngStyle]='{"color":(inpvalue==1)?"blue":"green"}'>
+                dddd
+    </div>
+
+
+    ng clsss
+    <div [ngClass]="applyClass()">
+        ng ssssssssssss{{applyClass()}}
+    </div>
+
+
+    <div [ngClass]="inpvalue==1?'one':''">
+        ng ssssssssssss{{applyClass()}}
+    </div>

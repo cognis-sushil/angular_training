@@ -10,6 +10,7 @@ import { Page2Component } from './page2/page2.component';
 import { HeaderComponent } from './header/header.component';
 import { FotterComponent } from './fotter/fotter.component';
 import { DirectveComponent } from './directve/directve.component';
+import { RolesDirective } from './roles.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DirectveComponent } from './directve/directve.component';
     Page2Component,
     HeaderComponent,
     FotterComponent,
-    DirectveComponent
+    DirectveComponent,
+    RolesDirective
   ],
   imports: [
     BrowserModule,
