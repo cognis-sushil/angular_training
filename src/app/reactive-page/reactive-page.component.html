@@ -1,0 +1,49 @@
+
+<div class="alert alert-danger"  *ngIf="showError">
+    {{msg}}
+</div>
+<div >
+    <div class="mb-3 mt-3">
+      <label for="loginId" class="form-label">LoginID:</label>
+      <input type="loginId" class="form-control" id="loginId" required="true" [(ngModel)]="loginId" placeholder="Enter Loign ID" name="loginId">
+    </div>
+    <div class="mb-3">
+      <label for="pwd" class="form-label">Password:</label>
+      <input type="password" class="form-control" id="pwd" [(ngModel)]="password" placeholder="Enter password" name="pswd">
+    </div>
+    <div class="form-check mb-3">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="showRem" name="remember"> Remember me
+      </label>
+    </div>{{showRem}}
+    <button type="submit" class="btn btn-primary" (click)="onLogin()">Submit</button>
+</div>
+
+<hr>
+
+second way
+
+
+<div [formGroup]='formGroup'>
+    <div class="mb-3 mt-3">
+      <label for="loginId" class="form-label">LoginID:</label>
+      <input type="loginId" formControlName="userId" class="form-control" id="loginId" required="true" placeholder="Enter Loign ID" name="loginId">
+    </div>
+    <div class="mb-3">
+      <label for="pwd" class="form-label">Password:</label>
+      <input type="password" formControlName='password'  class="form-control" id="pwd"  placeholder="Enter password" name="pswd">
+    </div>
+    <div class="form-check mb-3">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="showRem" name="remember"> Remember me
+      </label>
+    </div>{{showRem}}
+
+    This just for Test 
+    <div class="mb-3">
+        <label for="pwd" class="form-label">Test:</label>
+        <input type="text" [formControl]='test'  class="form-control" id="pwd"  placeholder="Enter password" name="pswd">
+      </div>
+      End for the test
+    <button type="submit" class="btn btn-primary" (click)="onLoginReactive()">Submit</button>
+</div>
