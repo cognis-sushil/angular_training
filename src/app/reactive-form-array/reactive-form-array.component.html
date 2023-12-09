@@ -1,0 +1,38 @@
+<div [formGroup]='formGroup'>
+    <div class="mb-3 mt-3">
+        <label for="loginId" class="form-label">LoginID:</label>
+        <input type="loginId" formControlName="name" class="form-control" id="loginId" required="true"
+            placeholder="Enter Loign ID" name="loginId">
+    </div>
+    <div class="mb-3">
+        <label for="pwd" class="form-label">Class:</label>
+        <select formControlName="class">
+            <option>one</option>
+            <option>two</option>
+        </select>
+    </div>
+
+    <h4>Skills <button (click)="addSkils()">Add</button></h4>
+    <hr>
+
+    <div formArrayName="skills">
+        <div *ngFor="let skill of skills().controls; let i=index">
+
+            <div [formGroupName]="i" class="row">
+                <div class="col-2">Technology
+                    <input class="form-control" formControlName="tech1">
+                    <div>
+                        <div class="col-6">Exp
+                            <input class="form-control" formControlName="exp">
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <button *ngIf="i!=0" (click)="remove(i)">Remove</button>
+        </div>
+    </div>
+            <button type="submit" class="btn btn-primary" (click)="onLoginReactive()">Submit</button>

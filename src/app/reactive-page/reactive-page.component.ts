@@ -33,7 +33,8 @@ export class ReactivePageComponent {
   constructor(private fb: FormBuilder) {
     this.formGroup = this.fb.group({
       userId: ["name222", [Validators.required, Validators.minLength(4)]],
-      password: [null, [Validators.required, Validators.maxLength(8)]]
+      password: [null, [Validators.required, Validators.maxLength(8)]],
+      personal:this.fb.group({ address1: ["nam222"], address2: ["nam222"],})
     });
     this.test= new FormControl("pls ente")
   }
@@ -52,6 +53,7 @@ export class ReactivePageComponent {
     console.log("test",this.test.value);
 
     // how to se value in reactive form 
-    this.formGroup.controls["userId"].setValue("ddddd")
+    //this.formGroup.controls["userId"].setValue("ddddd")
+    alert(JSON.stringify(this.formGroup.value))
   }
 }

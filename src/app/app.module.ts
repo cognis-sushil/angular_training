@@ -12,7 +12,10 @@ import { FotterComponent } from './fotter/fotter.component';
 import { DirectveComponent } from './directve/directve.component';
 import { RolesDirective } from './roles.directive';
 import { ReactivePageComponent } from './reactive-page/reactive-page.component';
-
+import { ReactiveFormArrayComponent } from './reactive-form-array/reactive-form-array.component';
+import { InputAndOutputComponent } from './input-and-output/input-and-output.component';
+import { Test2Component } from './input-and-output/test2/test2.component';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +26,11 @@ import { ReactivePageComponent } from './reactive-page/reactive-page.component';
     FotterComponent,
     DirectveComponent,
     RolesDirective,
-    ReactivePageComponent
+    ReactivePageComponent,
+    ReactiveFormArrayComponent,
+    InputAndOutputComponent,
+    Test2Component,
+   
   ],
   imports: [
     BrowserModule,
